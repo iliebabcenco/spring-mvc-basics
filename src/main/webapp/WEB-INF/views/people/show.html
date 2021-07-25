@@ -8,6 +8,8 @@
     <h3>Personal Info</h3>
     <p>Id: <span th:text="${person.getId()}"></span></p>
     <p>Name: <span th:text="${person.getName()}"></span></p>
+    <p>Age: <span th:text="${person.getAge()}"></span></p>
+    <p>Email: <span th:text="${person.getEmail()}"></span></p>
     <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
     <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
         <input type="submit" value="Remove person">
