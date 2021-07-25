@@ -28,4 +28,8 @@ public class PersonDAO {
         return people.stream().filter(person -> person.getId() == id).collect(Collectors.toList()).get(0);
     }
 
+    public void save(Person person) {
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
+    }
 }
